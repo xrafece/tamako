@@ -9,7 +9,7 @@ draft: false
 lang: ''
 ---
 
-## Vimrc reference
+## Tabstop, softtabstop and shiftwidth
 
 > [tab setting in vim](https://arisweedler.medium.com/tab-settings-in-vim-1ea0863c5990)
 
@@ -54,3 +54,34 @@ Well, that made it sound simple. But it gets kinda nuanced:<br>
 
 If you understand the abstractions that the designers of vim made, then everything is simple! Here’s how I understand it: enabling `softtabstop` says that `backspace` and `tab` should change of *columns of whitespace* instead of *characters*. And orthogonally related, `shiftwidth` is all about levels of indentation.<br>
 如果你理解 vim 设计者所做的抽象，那么一切就变得简单了！我的理解是这样的：启用 `softtabstop` 表示 `backspace` 和 `tab` 应该更改空白列而不是字符。与正交相关的是， `shiftwidth` 与缩进级别有关。
+
+## Vimrc file template
+
+```vim
+" 显示行号
+set number
+" 高亮搜索
+set hlsearch
+" 高亮自动匹配的括号
+set showmatch
+" set cursorline
+" 显示标尺
+set ruler
+" 显示输入的命令
+set showcmd
+" 自动缩进
+set autoindent
+" 缩进时自动对齐缩进长度
+set shiftround
+" 输入tab时会转换为空格
+set expandtab
+" 缩进长度为4
+set shiftwidth=4
+set tabstop=4 softtabstop=4
+" 次数暂时不起作用
+set smarttab
+" 语法高亮
+syntax enable
+
+autocmd FileType go setlocal noexpandtab
+```
