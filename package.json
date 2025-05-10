@@ -1,7 +1,7 @@
 {
-  "name": "fuwari",
+  "name": "tamako",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -10,8 +10,6 @@
     "astro": "astro",
     "type-check": "tsc --noEmit --isolatedDeclarations",
     "new-post": "node scripts/new-post.js",
-    "format": "biome format --write ./src",
-    "lint": "biome check --write ./src",
     "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {

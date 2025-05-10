@@ -1,8 +1,8 @@
-# 🍥Fuwari
+# 🍥Tamako-blog
 
-A static blog template built with [Astro](https://astro.build).
+A static blog powered by [Astro](https://astro.build).
 
-> README version: `2024-09-10`
+> README version: `2025-05-10`
 
 ## ✨ Features
 
