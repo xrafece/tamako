@@ -69,7 +69,7 @@ sudo useradd -m 用户名
 设置新用户密码
 
 ```shell
-sudo passed 用户名
+sudo passwd 用户名
 ```
 
 > 直接指定用户组
