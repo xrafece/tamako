@@ -29,4 +29,3 @@ yarn.lock
 .vscode/
 .idea/
 .gitignore
-vercel.json
