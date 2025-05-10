@@ -65,7 +65,7 @@ Mac OS  和 Windows 环境下对 JetBrains IDE 进行初始选项偏好设置
 
 ## Show Method Separators and WhiteSpaces 显示方法分界线和空格
 
-![image-20230726185956592](/Users/xrafece/MarkdownProjects/./image-20230726185956592.webp)
+![image-20230726185956592](./image-20230726185956592.webp)
 
 ## Comment Setting 注释前添加空格
 
