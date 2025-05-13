@@ -1,8 +1,8 @@
 # 🍥Tamako-blog
 
-A static blog powered by [Astro](https://astro.build).
+A static blog powered by [Astro](https://astro.build) and themed by [Fuwari](https://github.com/saicaca/fuwari).
 
-> README version: `2025-05-10`
+> README version: `2025-05-13`
 
 ## ✨ Features
 
@@ -52,3 +52,9 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm new-post <filename>`          | Create a new post                                |
 | `pnpm astro ...`                    | Run CLI commands like `astro add`, `astro check` |
 | `pnpm astro --help`                 | Get help using the Astro CLI                     |
+
+## New Theme comming
+
+A new theme named by `Furina` will comming soon.
+
+Furina Forever!
