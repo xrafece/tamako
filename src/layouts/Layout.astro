@@ -34,6 +34,7 @@ let { title, banner, description, lang, setOGTypeArticle } = Astro.props;
 // Swup can update the body for each page visit, but it's after the page transition, causing a delay for banner height change
 // so use Swup hooks instead to change the height immediately when a link is clicked
 const isHomePage = pathsEqual(Astro.url.pathname, url("/"));
+const isExtraPage = pathsEqual(Astro.url.pathname, url("/extra"));
 
 // defines global css variables
 // why doing this in Layout instead of GlobalStyles: https://github.com/withastro/astro/issues/6728#issuecomment-1502203757
@@ -148,7 +149,7 @@ const bannerOffset =
 		<link rel="alternate" type="application/rss+xml" title={profileConfig.name} href={`${Astro.site}rss.xml`}/>
 
 	</head>
-	<body class=" min-h-screen transition " class:list={[{"lg:is-home": isHomePage, "enable-banner": enableBanner}]}
+	<body class=" min-h-screen transition " class:list={[{"lg:is-home": isHomePage, "lg:is-extra": isExtraPage, "enable-banner": enableBanner}]}
 		  data-overlayscrollbars-initialize
 	>
 		<ConfigCarrier></ConfigCarrier>
@@ -191,6 +192,20 @@ const bannerOffset =
 	.navbar-hidden {
 		@apply opacity-0 -translate-y-16
 	}
+
+
+	.enable-banner.is-extra #banner-wrapper {
+		@apply h-[var(--banner-height-home)] translate-y-[var(--banner-height-extend)]
+	}
+	.enable-banner.is-extra #banner {
+		@apply h-[var(--banner-height-home)] translate-y-0
+	}
+	.enable-banner.is-extra #main-grid {
+		@apply translate-y-[var(--banner-height-extend)];
+	}
+	.enable-banner.is-extra #sidebar-sticky {
+		@apply top-[calc(1rem_-_var(--banner-height-extend))]
+	}
 }
 </style>
 
@@ -208,7 +223,7 @@ import {
 	BANNER_HEIGHT,
 	BANNER_HEIGHT_HOME,
 	BANNER_HEIGHT_EXTEND,
-	MAIN_PANEL_OVERLAPS_BANNER_HEIGHT
+	MAIN_PANEL_OVERLAPS_BANNER_HEIGHT,
 } from "../constants/constants";
 import { siteConfig } from '../config';
 
@@ -372,7 +387,7 @@ const setup = () => {
 		}
 		let threshold = window.innerHeight * (BANNER_HEIGHT / 100) - 72 - 16
 		let navbar = document.getElementById('navbar-wrapper')
-		if (!navbar || !document.body.classList.contains('lg:is-home')) {
+		if (!navbar || !document.body.classList.contains('lg:is-home') || !document.body.classList.contains('lg:is-extra')) {
 			return
 		}
 		if (document.body.scrollTop >= threshold || document.documentElement.scrollTop >= threshold) {
@@ -387,6 +402,13 @@ const setup = () => {
 			bodyElement!.classList.add('lg:is-home');
 		} else {
 			bodyElement!.classList.remove('lg:is-home');
+		}
+
+		// Extra page change banner height immediately when a link is clicked
+		if (pathsEqual(visit.to.url, url('/extra'))) {
+			bodyElement!.classList.add('lg:is-extra');
+		} else {
+			bodyElement!.classList.remove('lg:is-extra');
 		}
 
 		// increase the page height during page transition to prevent the scrolling animation from jumping
@@ -458,6 +480,9 @@ function scrollFunction() {
 
 		let bannerHeight = BANNER_HEIGHT
 		if (document.body.classList.contains('lg:is-home') && window.innerWidth >= 1024) {
+			bannerHeight = BANNER_HEIGHT_HOME
+		}
+		if (document.body.classList.contains('lg:is-extra') && window.innerWidth >= 1024) {
 			bannerHeight = BANNER_HEIGHT_HOME
 		}
 		let threshold = window.innerHeight * (bannerHeight / 100) - NAVBAR_HEIGHT - MAIN_PANEL_EXCESS_HEIGHT - 16
