@@ -1,7 +1,7 @@
 ---
 title: Vim Cheat
 published: 2025-05-10
-description: 'Use vim in termial and vscode'
+description: 'Use vim in terminal and vscode'
 image: ''
 tags: [Vim, Linux, VScode, CheatSheet]
 category: 'Vim'
