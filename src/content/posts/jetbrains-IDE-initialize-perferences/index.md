@@ -1,7 +1,7 @@
 ---
 title: JetBrains IDE Initialize Preferences
 published: 2023-07-25
-updated: 2025-5-20
+updated: 2025-05-20
 description: ''
 image: ''
 tags: [IDE]
