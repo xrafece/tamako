@@ -14,6 +14,16 @@ Mac OS 和 Windows 环境下对 JetBrains IDE 进行初始选项偏好设置
 
 # IntelliJ IDEA
 
+## Appearance 外观
+
+![appearance](./Snipaste_2025-05-20_20-13-20.webp)
+
+可以设置 light with light header 主题，让这个界面都保持亮色
+
+## Presentation Assistant  演示助理（快捷键显示）
+
+![presentation-assistant](./Snipaste_2025-05-20_20-12-59.webp)
+
 ## Auto Import 自动导包
 
 ![auto-import](./Snipaste_2025-05-17_20-30-14.webp)
@@ -62,9 +72,11 @@ Mac OS 和 Windows 环境下对 JetBrains IDE 进行初始选项偏好设置
 
 ## Code and Comment Indent Setting 代码和注释缩进设置
 
-![code-and-comment-indent-setting-1](./Snipaste_2025-05-17_20-35-41.webp)
+![code-and-comment-indent-setting-1](./Snipaste_2025-05-20_20-13-58.webp)
 
-![code-and-comment-indent-setting-2](./Snipaste_2025-05-17_20-36-54.webp)
+![code-and-comment-indent-setting-2](./Snipaste_2025-05-17_20-35-41.webp)
+
+![code-and-comment-indent-setting-3](./Snipaste_2025-05-17_20-36-54.webp)
 
 中文界面
 
