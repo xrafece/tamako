@@ -1,6 +1,7 @@
 ---
-title: JetBrains IDE Initialize Perferences
+title: JetBrains IDE Initialize Preferences
 published: 2023-07-25
+updated: 2025-5-20
 description: ''
 image: ''
 tags: [IDE]
@@ -9,29 +10,49 @@ draft: false
 lang: ''
 ---
 
-Mac OS  和 Windows 环境下对 JetBrains IDE 进行初始选项偏好设置
+Mac OS 和 Windows 环境下对 JetBrains IDE 进行初始选项偏好设置
 
 # IntelliJ IDEA
 
-## Match Case 不区分大小写
-
-![image-20210714135242866](./image-20210714135242866.webp)
-
 ## Auto Import 自动导包
 
-![image-20210714135440710](./image-20210714135440710.webp)
+![auto-import](./Snipaste_2025-05-17_20-30-14.webp)
+
+中文界面
+
+![auto-import-zh](./Snipaste_2025-05-17_20-41-14.webp)
 
 ## Show Method Separators and WhiteSpaces 显示方法分界线和空格
 
-![image-20210714135618420](./image-20210714135618420.webp)
+![show-method-separators-and-whitespace](./Snipaste_2025-05-17_20-31-12.webp)
+
+中文界面
+
+![show-method-separators-and-whitespace-zh](./Snipaste_2025-05-17_20-47-51.webp)
+
+## Match Case 不区分大小写
+
+![match-case](./Snipaste_2025-05-17_20-29-52.webp)
+
+中文界面
+
+![match-case-zh](./Snipaste_2025-05-17_20-46-05.webp)
 
 ## File Encodings 文件编码
 
-![image-20210714135725656](./image-20210714135725656.webp)
+![file-encodings](./Snipaste_2025-05-17_20-32-14.webp)
+
+中文界面
+
+![file-encodings-zh](./Snipaste_2025-05-17_20-49-24.webp)
 
 ## File and Code Templates 文件和代码模板
 
-![image-20210714140814660](./image-20210714140814660.webp)
+![file-and-code-templates](./Snipaste_2025-05-17_20-33-33.webp)
+
+中文界面
+
+![file-and-code-templates-zh](./Snipaste_2025-05-17_20-49-40.webp)
 
 ```
 /**
@@ -41,17 +62,25 @@ Mac OS  和 Windows 环境下对 JetBrains IDE 进行初始选项偏好设置
 
 ## Code and Comment Indent Setting 代码和注释缩进设置
 
-![image-20210714141731217](./image-20210714141731217.webp)
+![code-and-comment-indent-setting-1](./Snipaste_2025-05-17_20-35-41.webp)
 
-![image-20210714141825994](./image-20210714141825994.webp)
+![code-and-comment-indent-setting-2](./Snipaste_2025-05-17_20-36-54.webp)
+
+中文界面
+
+![code-and-comment-indent-setting-1-zh](./Snipaste_2025-05-17_20-50-26.webp)
+
+![code-and-comment-indent-setting-2-zh](./Snipaste_2025-05-17_20-51-17.webp)
+
+![code-and-comment-indent-setting-3-zh](./Snipaste_2025-05-17_20-53-22.webp)
 
 ## Plugins 插件
 
 1. `Material Theme UI Lite`
 
-2. `Presentation Assistant`
+2. `IdeaVim`
 
-3. `Alibaba Code Guide`
+3. `Astro`
 
 # GoLand
 
