@@ -3,7 +3,7 @@ title: Vim Cheat
 published: 2025-05-10
 description: 'Use vim in terminal and vscode'
 image: ''
-tags: [Vim, Linux, VScode, CheatSheet]
+tags: [Vim, Linux, VS Code, Cheat Sheet]
 category: 'Vim'
 draft: false 
 lang: ''
