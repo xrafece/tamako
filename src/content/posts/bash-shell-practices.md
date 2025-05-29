@@ -1,9 +1,10 @@
 ---
 title: Bash Shell Practices
 published: 2025-05-22
+updated: 2025-05-29
 description: '一些 shell 脚本实践'
 image: ''
-tags: [bash]
+tags: [Bash]
 category: 'Linux'
 draft: false 
 lang: ''
@@ -67,3 +68,73 @@ echo "成功转换文件数：${converted}"
 echo "跳过已存在文件数：${skipped}"
 
 ```
+### 创建code命令，使用IDE打开文件
+
+```shell
+#!/bin/zsh
+
+# 0参数  直接vscode .
+# 1参数  code $1 => code vscode / code idea / code goland
+# ide 直接打开当前路径
+# 2参数  code $1 $2 => code vscode ddd / code idea ddd / code goland dd
+# 先选择ide 在选择路径
+
+# 定义 IDE 命令映射（关联数组）
+typeset -A IDE_COMMANDS=(
+    [vs]="open -a 'Visual Studio Code'"      # VSCode
+    [idea]="open -a 'IntelliJ IDEA'"         # IDEA
+    [go]="open -a 'GoLand'"                  # Goland
+    [web]="open -a 'WebStorm'"               # WebStorm
+    # 添加更多 IDE...
+)
+
+# 参数处理逻辑
+case $# in
+    0)  # 无参数：用 VSCode 打开当前目录
+        eval "${IDE_COMMANDS[vs]} ."
+        ;;
+    1)  # 一个参数：用指定 IDE 打开当前目录
+        ide_type=$1
+        if [[ -n "${IDE_COMMANDS[$ide_type]}" ]]; then
+            eval "${IDE_COMMANDS[$ide_type]} ."
+        else
+            echo "🔴 错误：未知 IDE 类型 '$ide_type'"
+            echo "可用选项: ${(k)IDE_COMMANDS[@]}"
+            exit 1
+        fi
+        ;;
+    2)  # 两个参数：用指定 IDE 打开目标路径
+        ide_type=$1
+        target_path=$2
+        if [[ -n "${IDE_COMMANDS[$ide_type]}" ]]; then
+            if [[ -d "$target_path" ]]; then
+                eval "${IDE_COMMANDS[$ide_type]} '$target_path'"
+            else
+                echo "🔴 错误：路径不存在 '$target_path'"
+                exit 2
+            fi
+        else
+            echo "🔴 错误：未知 IDE 类型 '$ide_type'"
+            echo "可用选项: ${(k)IDE_COMMANDS[@]}"
+            exit 1
+        fi
+        ;;
+    *)  # 错误参数数量
+        echo "🔴 用法:"
+        echo "  code              -> 用 VSCode 打开当前目录"
+        echo "  code <IDE类型>    -> 用指定 IDE 打开当前目录"
+        echo "  code <IDE类型> <路径> -> 用指定 IDE 打开目标路径"
+        exit 3
+        ;;
+esac
+```
+
+在 `bashrc` 或者 `zshrc` 配置文件中添加别名
+
+```
+# For a full list of active aliases, run `alias`.
+...
+alias code="$ZSH/scripts/ide-launch.sh"
+...
+```
+
