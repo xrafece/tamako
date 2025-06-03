@@ -25,7 +25,7 @@ let fileName = args[0];
 // Add .md extension if not present
 const fileExtensionRegex = /\.(md|mdx)$/i;
 if (!fileExtensionRegex.test(fileName)) {
-	fileName += ".md";
+	fileName = path.join(fileName, "index.md");
 }
 
 const targetDir = "./src/content/posts/";
