@@ -3,7 +3,7 @@ title: Webp
 published: 2025-05-11
 updated: 2025-05-28
 description: 'An image format for the Web'
-image: ''
+image: './cover.webp'
 tags: [Webp, Front-End]
 category: 'Front-End'
 draft: false 
@@ -18,7 +18,7 @@ lang: ''
 
 WebP is a modern image format that provides superior lossless and lossy compression for images on the web. Using WebP, webmasters and web developers can create smaller, richer images that make the web faster.
 
-WebP lossless images are 26% smaller in size compared to PNGs. WebP lossy images are 25-34% smaller than comparable JPEG images at equivalent SSIM quality index.
+WebP lossless images are 26% smaller compared to PNGs. WebP lossy images are 25-34% smaller than comparable JPEG images at equivalent SSIM quality index.
 
 ### WebP Support
 

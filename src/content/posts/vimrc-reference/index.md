@@ -2,7 +2,7 @@
 title: Vimrc Reference
 published: 2025-05-10
 description: 'vimrc file reference'
-image: ''
+image: 'cover.jpg'
 tags: [Vim, Vimrc]
 category: 'Vim'
 draft: false 
@@ -85,3 +85,5 @@ syntax enable
 
 autocmd FileType go setlocal noexpandtab
 ```
+
+> [Introduction To Vim Customization](https://www.linode.com/docs/guides/introduction-to-vim-customization/)

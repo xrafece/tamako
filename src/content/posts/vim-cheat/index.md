@@ -2,7 +2,7 @@
 title: Vim Cheat
 published: 2025-05-10
 description: 'Use vim in terminal and vscode'
-image: ''
+image: 'cover.webp'
 tags: [Vim, Linux, VS-Code, Cheat-Sheet]
 category: 'Vim'
 draft: false 
