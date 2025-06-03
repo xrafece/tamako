@@ -4,8 +4,8 @@ published: 2025-05-11
 updated: 2025-05-28
 description: 'An image format for the Web'
 image: ''
-tags: [Webp, Front End]
-category: 'Misc'
+tags: [Webp, Front-End]
+category: 'Front-End'
 draft: false 
 lang: ''
 ---

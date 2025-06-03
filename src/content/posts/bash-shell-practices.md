@@ -68,7 +68,8 @@ echo "成功转换文件数：${converted}"
 echo "跳过已存在文件数：${skipped}"
 
 ```
-### 创建code命令，使用IDE打开文件
+
+## 创建code命令，使用IDE打开文件
 
 ```shell
 #!/bin/zsh
@@ -131,10 +132,10 @@ esac
 
 在 `bashrc` 或者 `zshrc` 配置文件中添加别名
 
-```
+```config
+
 # For a full list of active aliases, run `alias`.
 ...
 alias code="$ZSH/scripts/ide-launch.sh"
 ...
 ```
-
